@@ -32,7 +32,7 @@ $curl = curl_init();
 
 if ($coupon == "") {
   curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://easydonate.ru/api/v3/shop/payment/create?customer='.$customerr.'&email='.$email.'&server_id='.$server_id.'&products={"'.$ware.'":1}&success_url='.$redirect_url,
+  CURLOPT_URL => 'https://easydonate.ru/api/v3/shop/payment/create?customer='.$customer.'&email='.$email.'&server_id='.$server_id.'&products={"'.$ware.'":1}&success_url='.$redirect_url,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -47,7 +47,7 @@ if ($coupon == "") {
 ));
 }else{
   curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://easydonate.ru/api/v3/shop/payment/create?customer='.$customerr.'&email='.$email.'&coupon='.$coupon.'&server_id='.$server_id.'&products={"'.$ware.'":1}&success_url='.$redirect_url,
+  CURLOPT_URL => 'https://easydonate.ru/api/v3/shop/payment/create?customer='.$customer.'&email='.$email.'&coupon='.$coupon.'&server_id='.$server_id.'&products={"'.$ware.'":1}&success_url='.$redirect_url,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
